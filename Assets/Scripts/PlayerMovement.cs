@@ -20,12 +20,12 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             horizontal = new Vector3(-1,0,0);
-            Debug.Log("Left");
+           // Debug.Log("Left");
         }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
             horizontal = new Vector3(1, 0, 0);
-            Debug.Log("Right");
+            //Debug.Log("Right");
         }
         else
         {
