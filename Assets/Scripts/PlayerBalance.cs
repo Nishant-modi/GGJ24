@@ -4,14 +4,23 @@ using UnityEngine;
 
 public class PlayerBalance : MonoBehaviour
 {
+    [Header("Movement")]
     public Rigidbody2D PlayerU;
     public Transform BalancePoint;
     public float speed = 1f;
     private Vector3 horizontal;
+
+    [Header("Crouch")]
+    public HingeJoint2D hjU;
+    public Vector2 standingAnchor;
+    public Vector2 crouchingAnchor;
+    public Vector2 standingConnectedAnchor;
+    public Vector2 crouchingConnectedAnchor;
     // Start is called before the first frame update
     void Start()
     {
-
+        standingAnchor = hjU.anchor;
+        standingConnectedAnchor = hjU.connectedAnchor;
     }
 
     // Update is called once per frame
@@ -30,6 +39,23 @@ public class PlayerBalance : MonoBehaviour
         else
         {
             horizontal = new Vector3(0, 0, 0);
+        }
+
+
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            hjU.enableCollision = false;
+            hjU.anchor = crouchingAnchor;
+            Debug.Log("Crouch");
+            hjU.connectedAnchor = crouchingConnectedAnchor;
+            hjU.enableCollision = true;
+        }
+        else
+        {
+            hjU.enableCollision = false;
+            hjU.anchor = standingAnchor;
+            hjU.connectedAnchor = standingConnectedAnchor;
+            hjU.enableCollision = true;
         }
     }
 

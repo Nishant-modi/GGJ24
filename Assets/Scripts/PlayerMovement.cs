@@ -4,14 +4,26 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public Rigidbody2D PlayerL;
-    public Transform ForcePoint;
+    [Header("Movement")]
+    public Rigidbody2D playerL;
+    public Transform forcePoint;
     public float speed = 1f;
+
+    [Header("Crouch")]
+    public BoxCollider2D bcL;
+    public Vector2 standingSize;
+    public Vector2 crouchingSize;
+    public Vector2 standingOffset;
+    public Vector2 crouchingOffset;
+
+
     private Vector3 horizontal;
-    // Start is called before the first frame update
+
+    
     void Start()
     {
-        
+        standingSize = bcL.size;
+        standingOffset = bcL.offset;
     }
 
     // Update is called once per frame
@@ -31,16 +43,28 @@ public class PlayerMovement : MonoBehaviour
         {
             horizontal = new Vector3(0, 0, 0);
         }
+
+        if(Input.GetKey(KeyCode.DownArrow))
+        {
+            bcL.size = crouchingSize;
+            //Debug.Log("Crouch");
+            bcL.offset = crouchingOffset;
+        }
+        else
+        {
+            bcL.size = standingSize;
+            bcL.offset = standingOffset;
+        }
     }
 
     private void FixedUpdate()
     {
-        ApplyForce(PlayerL, horizontal);
+        ApplyForce(playerL, horizontal);
     }
 
     public void ApplyForce(Rigidbody2D rb, Vector3 direction)
     {
-        Vector3 pos = ForcePoint.position;
+        Vector3 pos = forcePoint.position;
         rb.AddForceAtPosition(direction * speed * 10,pos);
     }
 }
