@@ -10,12 +10,19 @@ public class FollowCamera : MonoBehaviour
     public Vector3 offset;
     public float smoothTime = 0.25f;
     private Vector3 velocity = Vector3.zero;
+    public Vector3 minValues, maxValue;
+
 
 
     void FixedUpdate()
     {
         target = (target1.transform.position);
         Vector3 targetPosition = new Vector3(target.x + offset.x, target.y + offset.y, -10f);
-        transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
+        Vector3 boundPosition = new Vector3(
+           Mathf.Clamp(targetPosition.x, minValues.x, maxValue.x),
+           Mathf.Clamp(targetPosition.y, minValues.y, maxValue.y),
+           Mathf.Clamp(targetPosition.z, minValues.z, maxValue.z));
+       
+        transform.position = Vector3.SmoothDamp(transform.position, boundPosition, ref velocity, smoothTime);
     }
 }
