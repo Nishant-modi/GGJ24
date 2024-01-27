@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 31f6bdf9e392f7540988e83f5c7617a4
+guid: 25b50f85afd2c564489d75bbb2f14694
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -107,19 +107,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -149,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: L1 flower pot_0
+      name: L1 wine_0
       rect:
         serializedVersion: 2
-        x: 4024
-        y: 965
-        width: 116
-        height: 114
+        x: 6267
+        y: 391
+        width: 36
+        height: 126
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,8 +150,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64fa8fe95b7078d4cbd35b14ad6c98c6
-      internalID: -1490611523
+      spriteID: 5ce2249642217b3429d399eea5c9e2b5
+      internalID: -1651972339
       vertices: []
       indices: 
       edges: []
@@ -180,7 +167,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      L1 flower pot_0: -1490611523
+      L1 wine_0: -1651972339
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
