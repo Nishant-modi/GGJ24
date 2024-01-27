@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 standingOffset;
     public Vector2 crouchingOffset;
 
-
+    public Animator animatorL;
     private Vector3 horizontal;
 
     
@@ -44,21 +44,31 @@ public class PlayerMovement : MonoBehaviour
             horizontal = new Vector3(0, 0, 0);
         }
 
-        //if(Input.GetButton("PlayerLHorizontal"))
+        
+        horizontal = new Vector3(Input.GetAxis("PlayerLHorizontal"), 0, 0);
+
+        if (horizontal == Vector3.zero)
         {
-            horizontal = new Vector3(Input.GetAxis("PlayerLHorizontal"), 0, 0);
+            animatorL.SetBool("isRunning", false);
+        }
+        else
+        {
+            animatorL.SetBool("isRunning", true);
         }
 
-        if(Input.GetKey(KeyCode.DownArrow) || Input.GetButton("PlayerLCrouch"))
+
+        if (Input.GetKey(KeyCode.DownArrow) || Input.GetButton("PlayerLCrouch"))
         {
             bcL.size = crouchingSize;
             //Debug.Log("Crouch");
             bcL.offset = crouchingOffset;
+            animatorL.SetBool("isCrouching", true);
         }
         else
         {
             bcL.size = standingSize;
             bcL.offset = standingOffset;
+            animatorL.SetBool("isCrouching", false);
         }
     }
 
