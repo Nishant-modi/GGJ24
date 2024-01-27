@@ -21,7 +21,8 @@ public class GrabObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.G) && IsGrabbableInVicinity() && hjGrab == null)
+        //if (Input.GetKeyDown(KeyCode.G) && IsGrabbableInVicinity() && hjGrab == null)
+        if (Input.GetButton("PlayerUGrab") && IsGrabbableInVicinity() && hjGrab == null)
         {
             isGrabbing = true;
             Debug.Log("is Grabbing");
@@ -29,14 +30,14 @@ public class GrabObject : MonoBehaviour
             hjGrab = gameObject.AddComponent<HingeJoint2D>();
             hjGrab.connectedBody = grabbableObject.gameObject.GetComponent<Rigidbody2D>();
         }
-        if (Input.GetKeyUp(KeyCode.G) || !IsGrabbableInVicinity())
+        if (Input.GetButtonUp("PlayerUGrab") || !IsGrabbableInVicinity())
         {
 
             Destroy(hjGrab);
             isGrabbing = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.G) && IsCollectibleInVicinity())
+        if (Input.GetButton("PlayerUGrab") && IsCollectibleInVicinity())
         {
             collectibleObject = Physics2D.OverlapCircle(vicinityCheck.position, 1f, collectibleObjectLayer);
             collectibleObject.gameObject.SetActive(false);

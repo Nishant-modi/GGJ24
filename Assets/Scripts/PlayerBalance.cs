@@ -41,8 +41,10 @@ public class PlayerBalance : MonoBehaviour
             horizontal = new Vector3(0, 0, 0);
         }
 
+        horizontal = new Vector3(Input.GetAxis("PlayerUBalance"), 0, 0);
 
-        if (Input.GetKey(KeyCode.DownArrow))
+
+        if (Input.GetKey(KeyCode.DownArrow) || Input.GetButton("PlayerLCrouch"))
         {
             hjU.enableCollision = false;
             hjU.anchor = crouchingAnchor;
