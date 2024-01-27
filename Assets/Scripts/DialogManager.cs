@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DialogManager : MonoBehaviour
 {
@@ -15,34 +16,44 @@ public class DialogManager : MonoBehaviour
     public float zoomOutSize;  // Adjust the zoom-out size
 
     [Header("Dialogue Controls")]
-    public Queue<string> sentences;
+    //public Queue<string> sentences;
+    public GameObject dialogue1;
+    public GameObject dialogue2;
 
     private void Start()
     {
         fc = FindObjectOfType<FollowCamera>();
         StartCoroutine(DialogCoroutine());
 
-        sentences = new Queue<string>();
+        //sentences = new Queue<string>();
     }
 
-    public void StartDialog()
-    {
-        StartCoroutine(DialogCoroutine());
-    }
+    //public void StartDialogue(Dialogue dialogue)
+    
+        //StartCoroutine(DialogCoroutine());
+    
 
     private IEnumerator DialogCoroutine()
     {
         fc.orthographicSize = zoomInSize;
 
-        fc.target1 = target2;
-        fc.offset = offset2;
+        if(SceneManager.GetActiveScene().name == "Level0")
+        {
+            fc.target1 = target2;
+            fc.offset = offset2;
+
+            yield return new WaitForSeconds(2f);
+
+
+
+            fc.target1 = target1;
+            fc.offset = offset1;
+        }
         
-        // Start dialog here (you can call your dialog system here)
+        
+        
 
-        yield return new WaitForSeconds(3f);
-
-        fc.target1 = target1;
-        fc.offset = offset1;
+        
 
         //fc.orthographicSize = zoomOutSize;
 
