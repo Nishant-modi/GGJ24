@@ -594,6 +594,8 @@ MonoBehaviour:
   offset2: {x: 0, y: 0, z: 0}
   zoomInSize: 5
   zoomOutSize: 10
+  dialogue1: {fileID: 0}
+  dialogue2: {fileID: 0}
 --- !u!4 &101450227
 Transform:
   m_ObjectHideFlags: 0
@@ -801,8 +803,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.36102408, y: -3.3917916}
-  m_Size: {x: 1.8820517, y: 7.964555}
+  m_Offset: {x: -0.006515683, y: -3.3917916}
+  m_Size: {x: 1.1730348, y: 7.964555}
   m_Direction: 0
 --- !u!114 &239121409
 MonoBehaviour:
@@ -817,6 +819,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 239121404}
+  cd: {fileID: 239121405}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &404928445
 GameObject:
   m_ObjectHideFlags: 0
@@ -1488,7 +1494,7 @@ GameObject:
   - component: {fileID: 584769501}
   m_Layer: 0
   m_Name: RWall
-  m_TagString: Untagged
+  m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1502,8 +1508,8 @@ Transform:
   m_GameObject: {fileID: 584769499}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 57.86, y: 0.84, z: -0.06953697}
-  m_LocalScale: {x: 0.6469593, y: 12.261247, z: 1}
+  m_LocalPosition: {x: 57.7345, y: 0.84, z: -0.06953697}
+  m_LocalScale: {x: 0.8979795, y: 12.261247, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 34640728}
@@ -1537,7 +1543,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -1.9231534, y: 0}
@@ -1809,7 +1815,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &645810072
 Transform:
   m_ObjectHideFlags: 0
@@ -1910,7 +1916,7 @@ Transform:
   m_GameObject: {fileID: 678257593}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.21, y: -3.3, z: 0}
+  m_LocalPosition: {x: 45.22, y: -3.3, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -2228,6 +2234,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1159053382}
+  cd: {fileID: 1159053383}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!70 &1159053386
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -2260,8 +2270,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.22760311, y: -3.4163923}
-  m_Size: {x: 1.6152062, y: 8.013758}
+  m_Offset: {x: 0.15372814, y: -3.4163923}
+  m_Size: {x: 0.8525438, y: 8.013758}
   m_Direction: 0
 --- !u!1 &1177173226
 GameObject:
