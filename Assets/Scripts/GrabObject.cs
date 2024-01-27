@@ -12,6 +12,7 @@ public class GrabObject : MonoBehaviour
     [SerializeField] private LayerMask collectibleObjectLayer;
     public Animator animatorU;
     private float isGrabbing;
+    public GameObject grabObject;
 
     private PlayerMovement pm;
 
@@ -19,6 +20,7 @@ public class GrabObject : MonoBehaviour
     void Start()
     {
         pm = FindObjectOfType<PlayerMovement>();
+        grabObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -83,6 +85,7 @@ public class GrabObject : MonoBehaviour
     {
         pm.objectCollected = true;
         Debug.Log("Object Collected");
+        grabObject.SetActive(true);
         //isGrabbing = false;
     }
 }
