@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 crouchingOffset;
 
     public Animator animatorL;
+    public Animator animatorU;
     private Vector3 horizontal;
 
     
@@ -50,10 +51,12 @@ public class PlayerMovement : MonoBehaviour
         if (horizontal == Vector3.zero)
         {
             animatorL.SetBool("isRunning", false);
+            animatorU.SetBool("isRunning", false);
         }
         else
         {
             animatorL.SetBool("isRunning", true);
+            animatorU.SetBool("isRunning", true);
         }
 
 

@@ -10,7 +10,8 @@ public class GrabObject : MonoBehaviour
     [SerializeField] private Transform vicinityCheck;
     [SerializeField] private LayerMask grabbableObjectLayer;
     [SerializeField] private LayerMask collectibleObjectLayer;
-    private bool isGrabbing;
+    public Animator animatorU;
+    private float isGrabbing;
 
     
     void Start()
@@ -24,25 +25,39 @@ public class GrabObject : MonoBehaviour
         //if (Input.GetKeyDown(KeyCode.G) && IsGrabbableInVicinity() && hjGrab == null)
         if (Input.GetButton("PlayerUGrab") && IsGrabbableInVicinity() && hjGrab == null)
         {
-            isGrabbing = true;
+            
             Debug.Log("is Grabbing");
-            grabbableObject = Physics2D.OverlapCircle(vicinityCheck.position, 1f, grabbableObjectLayer);
+            grabbableObject = Physics2D.OverlapCircle(vicinityCheck.position, 2f, grabbableObjectLayer);
             hjGrab = gameObject.AddComponent<HingeJoint2D>();
             hjGrab.connectedBody = grabbableObject.gameObject.GetComponent<Rigidbody2D>();
+            if(grabbableObject.transform.position.x<gameObject.transform.position.x)
+            {
+                isGrabbing = -1;
+
+            }
+            else
+            {
+                isGrabbing = 1;
+            }
+
+            animatorU.SetFloat("isGrabbing", isGrabbing);
         }
         if (Input.GetButtonUp("PlayerUGrab") || !IsGrabbableInVicinity())
         {
 
             Destroy(hjGrab);
-            isGrabbing = false;
+            isGrabbing = 0;
+            animatorU.SetFloat("isGrabbing", isGrabbing);
         }
 
         if (Input.GetButton("PlayerUGrab") && IsCollectibleInVicinity())
         {
-            collectibleObject = Physics2D.OverlapCircle(vicinityCheck.position, 1f, collectibleObjectLayer);
+            collectibleObject = Physics2D.OverlapCircle(vicinityCheck.position, 2f, collectibleObjectLayer);
             collectibleObject.gameObject.SetActive(false);
             ObjectCollected();
         }
+
+        
     }
 
     private void FixedUpdate()
@@ -53,17 +68,18 @@ public class GrabObject : MonoBehaviour
     public bool IsGrabbableInVicinity()
     {
         //Collider2D temp = Physics2D.OverlapCircle(vicinityCheck.position, 1f, grabbableObjectLayer);
-        return Physics2D.OverlapCircle(vicinityCheck.position, 1f, grabbableObjectLayer);
+        return Physics2D.OverlapCircle(vicinityCheck.position, 2f, grabbableObjectLayer);
     }
 
     public bool IsCollectibleInVicinity()
     {
         //Collider2D temp = Physics2D.OverlapCircle(vicinityCheck.position, 1f, grabbableObjectLayer);
-        return Physics2D.OverlapCircle(vicinityCheck.position, 1f, collectibleObjectLayer);
+        return Physics2D.OverlapCircle(vicinityCheck.position, 2f, collectibleObjectLayer);
     }
 
     public void ObjectCollected()
     {
         Debug.Log("Object Collected");
+        //isGrabbing = false;
     }
 }
