@@ -6,8 +6,10 @@ public class GrabObject : MonoBehaviour
 {
     private HingeJoint2D hjGrab;
     private Collider2D grabbableObject;
+    private Collider2D collectibleObject;
     [SerializeField] private Transform vicinityCheck;
     [SerializeField] private LayerMask grabbableObjectLayer;
+    [SerializeField] private LayerMask collectibleObjectLayer;
     private bool isGrabbing;
 
     
@@ -19,7 +21,7 @@ public class GrabObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.G) && IsInVicinity() && hjGrab == null)
+        if (Input.GetKeyDown(KeyCode.G) && IsGrabbableInVicinity() && hjGrab == null)
         {
             isGrabbing = true;
             Debug.Log("is Grabbing");
@@ -27,11 +29,18 @@ public class GrabObject : MonoBehaviour
             hjGrab = gameObject.AddComponent<HingeJoint2D>();
             hjGrab.connectedBody = grabbableObject.gameObject.GetComponent<Rigidbody2D>();
         }
-        if(Input.GetKeyUp(KeyCode.G) || !IsInVicinity())
+        if (Input.GetKeyUp(KeyCode.G) || !IsGrabbableInVicinity())
         {
 
             Destroy(hjGrab);
             isGrabbing = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.G) && IsCollectibleInVicinity())
+        {
+            collectibleObject = Physics2D.OverlapCircle(vicinityCheck.position, 1f, collectibleObjectLayer);
+            collectibleObject.gameObject.SetActive(false);
+            ObjectCollected();
         }
     }
 
@@ -40,9 +49,20 @@ public class GrabObject : MonoBehaviour
         
     }
 
-    public bool IsInVicinity()
+    public bool IsGrabbableInVicinity()
     {
         //Collider2D temp = Physics2D.OverlapCircle(vicinityCheck.position, 1f, grabbableObjectLayer);
         return Physics2D.OverlapCircle(vicinityCheck.position, 1f, grabbableObjectLayer);
+    }
+
+    public bool IsCollectibleInVicinity()
+    {
+        //Collider2D temp = Physics2D.OverlapCircle(vicinityCheck.position, 1f, grabbableObjectLayer);
+        return Physics2D.OverlapCircle(vicinityCheck.position, 1f, collectibleObjectLayer);
+    }
+
+    public void ObjectCollected()
+    {
+        Debug.Log("Object Collected");
     }
 }
