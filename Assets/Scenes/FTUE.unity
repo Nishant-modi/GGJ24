@@ -618,6 +618,7 @@ MonoBehaviour:
   collectibleObjectLayer:
     serializedVersion: 2
     m_Bits: 128
+  animatorU: {fileID: 0}
 --- !u!114 &641842915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1019,6 +1020,8 @@ MonoBehaviour:
   crouchingSize: {x: 1, y: 1.3}
   standingOffset: {x: 0, y: 0}
   crouchingOffset: {x: 0, y: -0.2}
+  animatorL: {fileID: 0}
+  animatorU: {fileID: 0}
 --- !u!70 &1000852387
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1831,7 +1834,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1525489048
 Transform:
   m_ObjectHideFlags: 0
@@ -2362,6 +2365,8 @@ MonoBehaviour:
   crouchingSize: {x: 0, y: 0}
   standingOffset: {x: 0, y: 0}
   crouchingOffset: {x: 0, y: 0}
+  animatorL: {fileID: 0}
+  animatorU: {fileID: 0}
 --- !u!70 &1778847373
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

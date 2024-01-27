@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -147,7 +147,385 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: 1.UI Indications_0
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 814
+        width: 133
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee3500ea4fd216b43b43f9eeced014a8
+      internalID: -1555567783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1.UI Indications_1
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 808
+        width: 137
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0592d0ff64bf4d49a0f4caeefd9b30a
+      internalID: 1375159646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1.UI Indications_2
+      rect:
+        serializedVersion: 2
+        x: 2314
+        y: 804
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a3e6a5cccc111944b5c0a6e464a3947
+      internalID: -307254629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1.UI Indications_3
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 758
+        width: 126
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f56697058cc375f4ca3fa69b549219ea
+      internalID: -473054318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1.UI Indications_4
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 758
+        width: 107
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16c6022b74fcdaf44878d45e5c13aaa9
+      internalID: -1172378709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1.UI Indications_5
+      rect:
+        serializedVersion: 2
+        x: 2237
+        y: 786
+        width: 11
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c028ec4cc6ba1a7448778e5ba1756d27
+      internalID: -606095298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1.UI Indications_6
+      rect:
+        serializedVersion: 2
+        x: 2310
+        y: 778
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd5ebbe9c7c255c489dd1e2027c4bc2a
+      internalID: -1159167049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1.UI Indications_7
+      rect:
+        serializedVersion: 2
+        x: 2241
+        y: 761
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7824f7b8e8909df41ab1b40649adb94b
+      internalID: -791388764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1.UI Indications_8
+      rect:
+        serializedVersion: 2
+        x: 2261
+        y: 748
+        width: 28
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b0f0c91914cabe4b83dc34b2d01e8bf
+      internalID: 2130798904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1.UI Indications_9
+      rect:
+        serializedVersion: 2
+        x: 2293
+        y: 756
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e4765e9bfa435c49b6a5b57f4e71e4b
+      internalID: 135093661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1.UI Indications_10
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 289
+        width: 112
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef329f92d2b445845a134cd177c0caa0
+      internalID: -942530539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1.UI Indications_11
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 279
+        width: 95
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dc17e533a57fa9479eb7d9e07a66010
+      internalID: 1607891597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1.UI Indications_12
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 146
+        width: 133
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 865017b4ab87dd24989fa49a1389f08a
+      internalID: -411761066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1.UI Indications_13
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 141
+        width: 136
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c7ad26a3197ea2449e766786767b12c
+      internalID: -39395307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1.UI Indications_14
+      rect:
+        serializedVersion: 2
+        x: 2209
+        y: 122
+        width: 133
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8379e2256aba1a848bc718238f8f54ab
+      internalID: 1393845694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1.UI Indications_15
+      rect:
+        serializedVersion: 2
+        x: 2349
+        y: 120
+        width: 62
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88d090e20b7309b4bbfcc7cbb9effe79
+      internalID: 108209148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1.UI Indications_16
+      rect:
+        serializedVersion: 2
+        x: 2432
+        y: 118
+        width: 15
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34ed193b4e3403647b67998eb24cea37
+      internalID: 1048072443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1.UI Indications_17
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 734
+        width: 185
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 088d556fa9f97d641a97f6d16d1f84f8
+      internalID: 2041201921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -158,7 +536,25 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      1.UI Indications_0: -1555567783
+      1.UI Indications_1: 1375159646
+      1.UI Indications_10: -942530539
+      1.UI Indications_11: 1607891597
+      1.UI Indications_12: -411761066
+      1.UI Indications_13: -39395307
+      1.UI Indications_14: 1393845694
+      1.UI Indications_15: 108209148
+      1.UI Indications_16: 1048072443
+      1.UI Indications_17: 2041201921
+      1.UI Indications_2: -307254629
+      1.UI Indications_3: -473054318
+      1.UI Indications_4: -1172378709
+      1.UI Indications_5: -606095298
+      1.UI Indications_6: -1159167049
+      1.UI Indications_7: -791388764
+      1.UI Indications_8: 2130798904
+      1.UI Indications_9: 135093661
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
