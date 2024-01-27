@@ -21,12 +21,14 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 horizontal;
 
     public GameManager gm;
+    public bool objectCollected = false;
 
     
     void Start()
     {
         standingSize = bcL.size;
         standingOffset = bcL.offset;
+        gm = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
@@ -75,11 +77,27 @@ public class PlayerMovement : MonoBehaviour
             bcL.offset = standingOffset;
             animatorL.SetBool("isCrouching", false);
         }
+
+
+        
     }
 
     private void FixedUpdate()
     {
         ApplyForce(playerL, horizontal);
+
+        if (gameObject.transform.rotation.eulerAngles.z > 60 && gameObject.transform.rotation.eulerAngles.z < 90)
+        {
+            Debug.Log("toppled");
+            //gm.Retry();
+            StartCoroutine(Toppled());
+        }
+        else if (gameObject.transform.rotation.eulerAngles.z > 270 && gameObject.transform.rotation.eulerAngles.z < 300)
+        {
+            Debug.Log("toppled");
+            //gm.Retry();
+            StartCoroutine(Toppled());
+        }
     }
 
     public void ApplyForce(Rigidbody2D rb, Vector3 direction)
@@ -93,7 +111,22 @@ public class PlayerMovement : MonoBehaviour
     {
         if(collision.gameObject.tag == "Finish")
         {
-            gm.NextLevel();
+            if(objectCollected)
+            {
+                gm.NextLevel();
+            }
+            else
+            {
+                Debug.Log("Collect the item to finish the level");
+            }
         }
+
+    }
+
+    public IEnumerator Toppled()
+    {
+        yield return new WaitForSeconds(3f);
+        gm.Retry();
+        //return null;
     }
 }

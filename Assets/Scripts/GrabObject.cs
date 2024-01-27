@@ -13,10 +13,12 @@ public class GrabObject : MonoBehaviour
     public Animator animatorU;
     private float isGrabbing;
 
+    private PlayerMovement pm;
+
     
     void Start()
     {
-        
+        pm = FindObjectOfType<PlayerMovement>();
     }
 
     // Update is called once per frame
@@ -79,6 +81,7 @@ public class GrabObject : MonoBehaviour
 
     public void ObjectCollected()
     {
+        pm.objectCollected = true;
         Debug.Log("Object Collected");
         //isGrabbing = false;
     }
