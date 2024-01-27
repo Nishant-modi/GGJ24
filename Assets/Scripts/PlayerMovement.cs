@@ -44,7 +44,12 @@ public class PlayerMovement : MonoBehaviour
             horizontal = new Vector3(0, 0, 0);
         }
 
-        if(Input.GetKey(KeyCode.DownArrow))
+        //if(Input.GetButton("PlayerLHorizontal"))
+        {
+            horizontal = new Vector3(Input.GetAxis("PlayerLHorizontal"), 0, 0);
+        }
+
+        if(Input.GetKey(KeyCode.DownArrow) || Input.GetButton("PlayerLCrouch"))
         {
             bcL.size = crouchingSize;
             //Debug.Log("Crouch");
