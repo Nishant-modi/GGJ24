@@ -574,7 +574,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &101450226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -582,12 +582,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 101450225}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb132c4e8565ad44d98fb00d11515bf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 0}
+  fc: {fileID: 0}
+  target1: {fileID: 0}
+  target2: {fileID: 0}
+  offset1: {x: 0, y: 0, z: 0}
+  offset2: {x: 0, y: 0, z: 0}
   zoomInSize: 5
   zoomOutSize: 10
 --- !u!4 &101450227
@@ -797,8 +801,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.36102408, y: -3.429462}
-  m_Size: {x: 1.8820517, y: 8.039895}
+  m_Offset: {x: -0.36102408, y: -3.3917916}
+  m_Size: {x: 1.8820517, y: 7.964555}
   m_Direction: 0
 --- !u!114 &239121409
 MonoBehaviour:
@@ -1430,7 +1434,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.31, y: -0.38, z: -10}
+  m_LocalPosition: {x: -10.32, y: -0.38, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1448,12 +1452,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c28b4fb86ff98147a0da26576876e2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target1: {fileID: 678257593}
+  target1: {fileID: 93972299}
   target: {x: 0, y: 0, z: 0}
   offset: {x: 4, y: 1, z: 0}
   smoothTime: 0.25
   minValues: {x: -10.3, y: -0.4, z: -10}
-  maxValue: {x: 30, y: -0.4, z: -10}
+  maxValue: {x: 47, y: -0.4, z: -10}
+  orthographicSize: 5.2
 --- !u!114 &519420034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1905,7 +1910,7 @@ Transform:
   m_GameObject: {fileID: 678257593}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18, y: -3.3, z: 0}
+  m_LocalPosition: {x: -15.21, y: -3.3, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -2255,8 +2260,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.22760311, y: -3.5796301}
-  m_Size: {x: 1.6152062, y: 8.340232}
+  m_Offset: {x: -0.22760311, y: -3.4163923}
+  m_Size: {x: 1.6152062, y: 8.013758}
   m_Direction: 0
 --- !u!1 &1177173226
 GameObject:
@@ -2834,7 +2839,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 92319edb3119d2f4c8a849a8f3fa4077, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2493735e169b0dc42a44713fd5e8de6f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2942,7 +2947,7 @@ GameObject:
   - component: {fileID: 1625242455}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2956,8 +2961,8 @@ Transform:
   m_GameObject: {fileID: 1625242453}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.5844, y: -5.17, z: -0.06953697}
-  m_LocalScale: {x: 65.06285, y: 1.0540866, z: 1}
+  m_LocalPosition: {x: 19.3557, y: -5.17, z: -0.06953697}
+  m_LocalScale: {x: 76.605, y: 1.0540866, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 34640728}

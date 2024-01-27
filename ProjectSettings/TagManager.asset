@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Pots
+  - Ground
   layers:
   - Default
   - TransparentFX
