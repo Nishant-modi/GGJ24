@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
     public Animator animatorU;
     private Vector3 horizontal;
 
+    public GameManager gm;
+
     
     void Start()
     {
@@ -84,5 +86,14 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 pos = forcePoint.position;
         rb.AddForceAtPosition(direction * speed * 10,pos);
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Finish")
+        {
+            gm.NextLevel();
+        }
     }
 }
