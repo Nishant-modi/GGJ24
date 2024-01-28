@@ -14,6 +14,8 @@ public class GrabObject : MonoBehaviour
     private float isGrabbing;
     public GameObject grabObject;
 
+    public GameObject popcornsprite;
+
     private PlayerMovement pm;
 
     
@@ -34,6 +36,7 @@ public class GrabObject : MonoBehaviour
             grabbableObject = Physics2D.OverlapCircle(vicinityCheck.position, 2f, grabbableObjectLayer);
             hjGrab = gameObject.AddComponent<HingeJoint2D>();
             hjGrab.connectedBody = grabbableObject.gameObject.GetComponent<Rigidbody2D>();
+            
             if(grabbableObject.transform.position.x<gameObject.transform.position.x)
             {
                 isGrabbing = -1;
@@ -48,7 +51,11 @@ public class GrabObject : MonoBehaviour
         }
         if (Input.GetButtonUp("PlayerUGrab") || !IsGrabbableInVicinity())
         {
-
+            if(grabbableObject!=null)
+            {
+                //grabbableObject.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+            }
+            
             Destroy(hjGrab);
             isGrabbing = 0;
             animatorU.SetFloat("isGrabbing", isGrabbing);
@@ -57,6 +64,10 @@ public class GrabObject : MonoBehaviour
         if (Input.GetButton("PlayerUGrab") && IsCollectibleInVicinity())
         {
             collectibleObject = Physics2D.OverlapCircle(vicinityCheck.position, 2f, collectibleObjectLayer);
+            if(collectibleObject.gameObject.tag == "Popcorn")
+            {
+                popcornsprite.SetActive(true);
+            }
             collectibleObject.gameObject.SetActive(false);
             ObjectCollected();
         }

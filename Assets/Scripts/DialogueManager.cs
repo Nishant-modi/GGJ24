@@ -61,6 +61,10 @@ public class DialogueManager : MonoBehaviour
             sceneChange = true;
             gm.NextLevel();
         }
+        else if (SceneManager.GetActiveScene().name == "Level3")
+        {
+            gm.NextLevel();
+        }
         else
         {
             dialogue1.SetActive(true);

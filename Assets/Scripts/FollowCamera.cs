@@ -5,7 +5,8 @@ using UnityEngine;
 public class FollowCamera : MonoBehaviour
 {
     public GameObject target1;
-    //public GameObject target2;
+    
+    public GameObject target2;
     public Vector3 target;
     public Vector3 offset;
     public float smoothTime = 0.25f;
@@ -23,7 +24,7 @@ public class FollowCamera : MonoBehaviour
     void FixedUpdate()
     {
             mainCamera.orthographicSize = orthographicSize;
-            target = (target1.transform.position);
+            target = (target1.transform.position + target2.transform.position)/2;
             Vector3 targetPosition = new Vector3(target.x + offset.x, target.y + offset.y, -10f);
             Vector3 boundPosition = new Vector3(
                Mathf.Clamp(targetPosition.x, minValues.x, maxValue.x),

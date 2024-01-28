@@ -356,6 +356,7 @@ MonoBehaviour:
     m_Bits: 128
   animatorU: {fileID: 1051410559}
   grabObject: {fileID: 430911657}
+  popcornsprite: {fileID: 0}
 --- !u!114 &93972302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1742,6 +1743,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target1: {fileID: 93972299}
+  target2: {fileID: 1177173226}
   target: {x: 0, y: 0, z: 0}
   offset: {x: 4, y: 1, z: 0}
   smoothTime: 0.25
@@ -2200,7 +2202,7 @@ Transform:
   m_GameObject: {fileID: 678257593}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 38.9, y: -3.3, z: 0}
+  m_LocalPosition: {x: -18.8, y: -3.3, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children:
