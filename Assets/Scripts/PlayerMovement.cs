@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
     public Animator animatorU;
     private Vector3 horizontal;
 
+    public bool isWalking = false;
+
     public GameManager gm;
     public bool objectCollected = false;
 
@@ -56,11 +58,13 @@ public class PlayerMovement : MonoBehaviour
         {
             animatorL.SetBool("isRunning", false);
             animatorU.SetBool("isRunning", false);
+            isWalking = false;
         }
         else
         {
             animatorL.SetBool("isRunning", true);
             animatorU.SetBool("isRunning", true);
+            isWalking = true;
         }
 
 

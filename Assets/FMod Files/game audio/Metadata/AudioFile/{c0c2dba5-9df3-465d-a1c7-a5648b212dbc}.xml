@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{c0c2dba5-9df3-465d-a1c7-a5648b212dbc}">
+		<property name="assetPath">
+			<value>718882__gizemhozdemir__steps-01-5.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.46060416666666665</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{6495e8d7-2c4b-43cb-9388-886857111399}</destination>
+		</relationship>
+	</object>
+</objects>
