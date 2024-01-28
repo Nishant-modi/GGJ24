@@ -8,9 +8,15 @@ public class GameManager : MonoBehaviour
     public GameObject nextLevelUI;
     public GameObject gameLoseUI;
     public GameObject Player;
+    public DialogueManager dm;
 
     //public GameObject entryDoor;
     public bool levelComplete;
+
+    private void Start()
+    {
+        dm = FindObjectOfType<DialogueManager>();
+    }
 
     public void Retry()
     {
@@ -19,6 +25,8 @@ public class GameManager : MonoBehaviour
 
     public void NextLevel()
     {
+
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     public void RestartGame()
@@ -35,6 +43,11 @@ public class GameManager : MonoBehaviour
     {
         if (levelComplete)
         {
+            
+            if(dm.sceneChange)
+            {
+
+            }
             nextLevelUI.SetActive(true);
         }
         else
@@ -48,6 +61,11 @@ public class GameManager : MonoBehaviour
     {
         //Death animation
         gameLoseUI.SetActive(true);
+    }
+
+    public void dialogueStart()
+    {
+        dm.StartDialogue();
     }
 
 }

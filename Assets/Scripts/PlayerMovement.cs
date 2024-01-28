@@ -113,7 +113,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if(objectCollected)
             {
-                gm.NextLevel();
+                gm.dialogueStart();
             }
             else
             {
