@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1f724d28521d50247add8799ebe5c170
+guid: 3164c1288f0eec547aeb395b16f83c7b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -107,19 +107,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -149,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: L2 see saw_0
+      name: L2 pergola_0
       rect:
         serializedVersion: 2
-        x: 1699
-        y: 120
-        width: 746
-        height: 49
+        x: 5217
+        y: 62
+        width: 1023
+        height: 699
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,8 +150,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2af5662edc4ce024083360e37fa5609e
-      internalID: -113001608
+      spriteID: 5dcba0db096f2b34c8372f2d402f5153
+      internalID: -586714807
       vertices: []
       indices: 
       edges: []
@@ -180,7 +167,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      L2 see saw_0: -113001608
+      L2 pergola_0: -586714807
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
