@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class GrabsFlower : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private Vector3 oldPosition;
+    private GrabObject go;
 
-    // Update is called once per frame
+    private void Start()
+
+    {
+        go = FindObjectOfType<GrabObject>();
+        oldPosition = gameObject.transform.position;
+    }
     void Update()
     {
-        
+        if(gameObject.transform.position.x > oldPosition.x  + 3f || gameObject.transform.position.x < oldPosition.x -3f)
+        {
+            gameObject.SetActive(false);
+            go.ObjectCollected();
+            Debug.Log("taken flower");
+        }
     }
+    
+    
 }
