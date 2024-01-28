@@ -2389,6 +2389,66 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1003389885}
   m_CullTransparentMesh: 1
+--- !u!1 &1019847896
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1019847898}
+  - component: {fileID: 1019847897}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1019847897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019847896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5e8aa3407f82914fb758a6f08ebe150, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FootstepsEvent:
+    Guid:
+      Data1: -715584595
+      Data2: 1285885740
+      Data3: -516297832
+      Data4: -371593027
+    Path: event:/Footsteps
+  BGTheme:
+    Guid:
+      Data1: -744599078
+      Data2: 1107539139
+      Data3: -1085593676
+      Data4: 1294605918
+    Path: event:/Background
+  rate: 0.3
+  player: {fileID: 1177173226}
+--- !u!4 &1019847898
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019847896}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.100242, y: 4.045123, z: -0.29932514}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1051410557
 GameObject:
   m_ObjectHideFlags: 0
@@ -4333,3 +4393,4 @@ SceneRoots:
   - {fileID: 101450227}
   - {fileID: 1376549469}
   - {fileID: 1232974173}
+  - {fileID: 1019847898}
